@@ -1,8 +1,10 @@
-package com.scalawarrior.scalajs.ace
+package com.scalawarrior.scalajs
 
 import org.scalajs.dom.raw._
 import scala.scalajs.js
 import js.annotation._
+
+package ace {
 
 trait Delta extends js.Object {
   var action: String = js.native
@@ -698,6 +700,8 @@ class VirtualRenderer protected () extends js.Object {
 
 @JSName("AceAjax.VirtualRenderer")
 object VirtualRenderer extends js.Object {
+}
+
 }
 
 package object ace extends js.GlobalScope {
