@@ -16,7 +16,7 @@ libraryDependencies += "com.scalawarrior" %%% "scalajs-ace" % "0.0.1-SNAPSHOT"
 then enjoy Ace in Scala.js!
 
 ```scala
-import com.scalawarrior.scalajs.ace
+import com.scalawarrior.scalajs.ace._
 
 val editor = ace.edit("editor")
 editor.setTheme("ace/theme/monokai")

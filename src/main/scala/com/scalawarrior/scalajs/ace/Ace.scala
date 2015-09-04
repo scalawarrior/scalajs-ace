@@ -17,6 +17,7 @@ trait EditorCommand extends js.Object {
   var name: String = js.native
   var bindKey: js.Any = js.native
   var exec: js.Function = js.native
+  var readOnly: Boolean = js.native
 }
 
 trait CommandManager extends js.Object {
@@ -25,6 +26,7 @@ trait CommandManager extends js.Object {
   var platform: String = js.native
   def addCommands(commands: js.Array[EditorCommand]): js.Dynamic = js.native
   def addCommand(command: EditorCommand): js.Dynamic = js.native
+  def removeCommand(commandname: String): Unit = js.native
   def exec(name: String, editor: Editor, args: js.Any): js.Dynamic = js.native
 }
 
@@ -300,6 +302,7 @@ class Editor protected () extends js.Object {
   def onCut(): js.Dynamic = js.native
   def onPaste(text: String): js.Dynamic = js.native
   def insert(text: String): js.Dynamic = js.native
+  def setAutoScrollEditorIntoView(): Unit = js.native
   def setOverwrite(overwrite: Boolean): js.Dynamic = js.native
   def getOverwrite(): Boolean = js.native
   def toggleOverwrite(): js.Dynamic = js.native
