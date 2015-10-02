@@ -9,7 +9,7 @@ version := "0.0.1-SNAPSHOT"
 
 organization := "com.scalawarrior"
 
-scalaVersion := "2.11.5"
+scalaVersion := "2.11.7"
 
 //crossScalaVersions := Seq("2.10.4", "2.11.5")
 
