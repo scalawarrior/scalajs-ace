@@ -2,6 +2,7 @@ package com.scalawarrior.scalajs
 
 import org.scalajs.dom.raw._
 import scala.scalajs.js
+import js.|
 import js.annotation._
 
 package ace {
@@ -190,7 +191,7 @@ trait IEditSession extends js.Object {
   def clearBreakpoints(): js.Dynamic = js.native
   def setBreakpoint(row: Double, className: String): js.Dynamic = js.native
   def clearBreakpoint(row: Double): js.Dynamic = js.native
-  def addMarker(range: Range, clazz: String, `type`: js.Function, inFront: Boolean): js.Dynamic = js.native
+  def addMarker(range: Range, clazz: String, `type`: js.Function | String, inFront: Boolean): Int = js.native
   def addDynamicMarker(marker: js.Any, inFront: Boolean): js.Dynamic = js.native
   def removeMarker(markerId: Double): js.Dynamic = js.native
   def getMarkers(inFront: Boolean): js.Array[js.Any] = js.native
