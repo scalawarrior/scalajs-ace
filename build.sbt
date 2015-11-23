@@ -19,6 +19,19 @@ libraryDependencies +=
 //jsDependencies +=
 //  "org.webjars" % "jquery" % "2.1.3" / "2.1.3/jquery.js"
 
+scalacOptions ++= Seq(
+  "-deprecation",
+  "-encoding", "UTF-8",
+  "-feature",
+  "-unchecked",
+  "-Xlint",
+  "-Yno-adapted-args",
+  "-Ywarn-numeric-widen",
+  "-Ywarn-value-discard",
+  "-Xfuture",
+  "-Ywarn-unused-import"
+)
+
 publishTo <<= (version) { version: String =>
   val repoInfo =
     if (version.trim.endsWith("SNAPSHOT"))
