@@ -5,7 +5,7 @@ name := "Scala.js Ace"
 
 normalizedName := "scalajs-ace"
 
-version := "0.0.1-SNAPSHOT"
+version := "0.0.1"
 
 organization := "com.scalawarrior"
 
