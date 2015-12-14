@@ -7,50 +7,50 @@ import js.annotation._
 
 package ace {
 
-@js.native
+@ScalaJSDefined
 trait Delta extends js.Object {
-  var action: String = js.native
-  var range: Range = js.native
-  var text: String = js.native
-  var lines: js.Array[String] = js.native
+  var action: String
+  var range: Range
+  var text: String
+  var lines: js.Array[String]
 }
 
-@js.native
+@ScalaJSDefined
 trait EditorCommand extends js.Object {
-  var name: String = js.native
-  var bindKey: js.Any = js.native
-  var exec: js.Function = js.native
-  var readOnly: Boolean = js.native
+  var name: String
+  var bindKey: js.Any
+  var exec: js.Function
+  var readOnly: Boolean
 }
 
-@js.native
+@ScalaJSDefined
 trait CommandManager extends js.Object {
-  var byName: js.Array[EditorCommand] = js.native
-  var commands: js.Array[EditorCommand] = js.native
-  var platform: String = js.native
-  def addCommands(commands: js.Array[EditorCommand]): js.Dynamic = js.native
-  def addCommand(command: EditorCommand): js.Dynamic = js.native
-  def removeCommand(commandname: String): Unit = js.native
-  def exec(name: String, editor: Editor, args: js.Any): js.Dynamic = js.native
+  var byName: js.Array[EditorCommand]
+  var commands: js.Array[EditorCommand]
+  var platform: String
+  def addCommands(commands: js.Array[EditorCommand]): js.Dynamic
+  def addCommand(command: EditorCommand): js.Dynamic
+  def removeCommand(commandname: String): Unit
+  def exec(name: String, editor: Editor, args: js.Any): js.Dynamic
 }
 
-@js.native
+@ScalaJSDefined
 trait Annotation extends js.Object {
-  var row: Double = js.native
-  var column: Double = js.native
-  var text: String = js.native
-  var `type`: String = js.native
+  var row: Double
+  var column: Double
+  var text: String
+  var `type`: String
 }
 
-@js.native
+@ScalaJSDefined
 trait TokenInfo extends js.Object {
-  var value: String = js.native
+  var value: String
 }
 
-@js.native
+@ScalaJSDefined
 trait Position extends js.Object {
-  var row: Double = js.native
-  var column: Double = js.native
+  var row: Double
+  var column: Double
 }
 
 @js.native
@@ -71,23 +71,23 @@ class KeyBinding protected () extends js.Object {
 object KeyBinding extends js.Object {
 }
 
-@js.native
+@ScalaJSDefined
 trait TextMode extends js.Object {
-  def getTokenizer(): js.Dynamic = js.native
-  def toggleCommentLines(state: js.Any, doc: js.Any, startRow: js.Any, endRow: js.Any): js.Dynamic = js.native
-  def getNextLineIndent(state: js.Any, line: js.Any, tab: js.Any): String = js.native
-  def checkOutdent(state: js.Any, line: js.Any, input: js.Any): Boolean = js.native
-  def autoOutdent(state: js.Any, doc: js.Any, row: js.Any): js.Dynamic = js.native
-  def createWorker(session: js.Any): js.Dynamic = js.native
-  def createModeDelegates(mapping: js.Any): js.Dynamic = js.native
-  def transformAction(state: js.Any, action: js.Any, editor: js.Any, session: js.Any, param: js.Any): js.Dynamic = js.native
+  def getTokenizer(): js.Dynamic
+  def toggleCommentLines(state: js.Any, doc: js.Any, startRow: js.Any, endRow: js.Any): js.Dynamic
+  def getNextLineIndent(state: js.Any, line: js.Any, tab: js.Any): String
+  def checkOutdent(state: js.Any, line: js.Any, input: js.Any): Boolean
+  def autoOutdent(state: js.Any, doc: js.Any, row: js.Any): js.Dynamic
+  def createWorker(session: js.Any): js.Dynamic
+  def createModeDelegates(mapping: js.Any): js.Dynamic
+  def transformAction(state: js.Any, action: js.Any, editor: js.Any, session: js.Any, param: js.Any): js.Dynamic
 }
 
-@js.native
+@ScalaJSDefined
 trait Ace extends js.Object {
-  def require(moduleName: String): js.Dynamic = js.native
-  def edit(el: String): Editor = js.native
-  def createEditSession(text: Document, mode: TextMode): IEditSession = js.native
+  def require(moduleName: String): js.Dynamic
+  def edit(el: String): Editor
+  def createEditSession(text: Document, mode: TextMode): IEditSession
 }
 
 @js.native
@@ -163,112 +163,112 @@ class Document protected () extends js.Object {
 object Document extends js.Object {
 }
 
-@js.native
+@ScalaJSDefined
 trait IEditSession extends js.Object {
-  var selection: Selection = js.native
-  var bgTokenizer: BackgroundTokenizer = js.native
-  var doc: Document = js.native
-  def on(event: String, fn: js.Function1[js.Any, Any]): js.Dynamic = js.native
-  def findMatchingBracket(position: Position): js.Dynamic = js.native
-  def addFold(text: String, range: Range): js.Dynamic = js.native
-  def getFoldAt(row: Double, column: Double): js.Dynamic = js.native
-  def removeFold(arg: js.Any): js.Dynamic = js.native
-  def expandFold(arg: js.Any): js.Dynamic = js.native
-  def unfold(arg1: js.Any, arg2: Boolean): js.Dynamic = js.native
-  def screenToDocumentColumn(row: Double, column: Double): js.Dynamic = js.native
-  def getFoldDisplayLine(foldLine: js.Any, docRow: Double, docColumn: Double): js.Dynamic = js.native
-  def getFoldsInRange(range: Range): js.Dynamic = js.native
-  def highlight(text: String): js.Dynamic = js.native
-  def setDocument(doc: Document): js.Dynamic = js.native
-  def getDocument(): Document = js.native
+  var selection: Selection
+  var bgTokenizer: BackgroundTokenizer
+  var doc: Document
+  def on(event: String, fn: js.Function1[js.Any, Any]): js.Dynamic
+  def findMatchingBracket(position: Position): js.Dynamic
+  def addFold(text: String, range: Range): js.Dynamic
+  def getFoldAt(row: Double, column: Double): js.Dynamic
+  def removeFold(arg: js.Any): js.Dynamic
+  def expandFold(arg: js.Any): js.Dynamic
+  def unfold(arg1: js.Any, arg2: Boolean): js.Dynamic
+  def screenToDocumentColumn(row: Double, column: Double): js.Dynamic
+  def getFoldDisplayLine(foldLine: js.Any, docRow: Double, docColumn: Double): js.Dynamic
+  def getFoldsInRange(range: Range): js.Dynamic
+  def highlight(text: String): js.Dynamic
+  def setDocument(doc: Document): js.Dynamic
+  def getDocument(): Document
   @JSName("$resetRowCache")
-  def `$resetRowCache`(row: Double): js.Dynamic = js.native
-  def setValue(text: String): js.Dynamic = js.native
-  def setMode(mode: String): js.Dynamic = js.native
-  def getValue(): String = js.native
-  def getSelection(): Selection = js.native
-  def getState(row: Double): String = js.native
-  def getTokens(row: Double): js.Array[TokenInfo] = js.native
-  def getTokenAt(row: Double, column: Double): TokenInfo = js.native
-  def setUndoManager(undoManager: UndoManager): js.Dynamic = js.native
-  def getUndoManager(): UndoManager = js.native
-  def getTabString(): String = js.native
-  def setUseSoftTabs(useSoftTabs: Boolean): js.Dynamic = js.native
-  def getUseSoftTabs(): Boolean = js.native
-  def setTabSize(tabSize: Double): js.Dynamic = js.native
-  def getTabSize(): Double = js.native
-  def isTabStop(position: js.Any): Boolean = js.native
-  def setOverwrite(overwrite: Boolean): js.Dynamic = js.native
-  def getOverwrite(): Boolean = js.native
-  def toggleOverwrite(): js.Dynamic = js.native
-  def addGutterDecoration(row: Double, className: String): js.Dynamic = js.native
-  def removeGutterDecoration(row: Double, className: String): js.Dynamic = js.native
-  def getBreakpoints(): js.Array[Double] = js.native
-  def setBreakpoints(rows: js.Array[js.Any]): js.Dynamic = js.native
-  def clearBreakpoints(): js.Dynamic = js.native
-  def setBreakpoint(row: Double, className: String): js.Dynamic = js.native
-  def clearBreakpoint(row: Double): js.Dynamic = js.native
-  def addMarker(range: Range, clazz: String, `type`: js.Function | String, inFront: Boolean): Int = js.native
-  def addDynamicMarker(marker: js.Any, inFront: Boolean): js.Dynamic = js.native
-  def removeMarker(markerId: Double): js.Dynamic = js.native
-  def getMarkers(inFront: Boolean): js.Array[js.Any] = js.native
-  def setAnnotations(annotations: js.Array[Annotation]): js.Dynamic = js.native
-  def getAnnotations(): js.Dynamic = js.native
-  def clearAnnotations(): js.Dynamic = js.native
+  def `$resetRowCache`(row: Double): js.Dynamic
+  def setValue(text: String): js.Dynamic
+  def setMode(mode: String): js.Dynamic
+  def getValue(): String
+  def getSelection(): Selection
+  def getState(row: Double): String
+  def getTokens(row: Double): js.Array[TokenInfo]
+  def getTokenAt(row: Double, column: Double): TokenInfo
+  def setUndoManager(undoManager: UndoManager): js.Dynamic
+  def getUndoManager(): UndoManager
+  def getTabString(): String
+  def setUseSoftTabs(useSoftTabs: Boolean): js.Dynamic
+  def getUseSoftTabs(): Boolean
+  def setTabSize(tabSize: Double): js.Dynamic
+  def getTabSize(): Double
+  def isTabStop(position: js.Any): Boolean
+  def setOverwrite(overwrite: Boolean): js.Dynamic
+  def getOverwrite(): Boolean
+  def toggleOverwrite(): js.Dynamic
+  def addGutterDecoration(row: Double, className: String): js.Dynamic
+  def removeGutterDecoration(row: Double, className: String): js.Dynamic
+  def getBreakpoints(): js.Array[Double]
+  def setBreakpoints(rows: js.Array[js.Any]): js.Dynamic
+  def clearBreakpoints(): js.Dynamic
+  def setBreakpoint(row: Double, className: String): js.Dynamic
+  def clearBreakpoint(row: Double): js.Dynamic
+  def addMarker(range: Range, clazz: String, `type`: js.Function | String, inFront: Boolean): Int
+  def addDynamicMarker(marker: js.Any, inFront: Boolean): js.Dynamic
+  def removeMarker(markerId: Double): js.Dynamic
+  def getMarkers(inFront: Boolean): js.Array[js.Any]
+  def setAnnotations(annotations: js.Array[Annotation]): js.Dynamic
+  def getAnnotations(): js.Dynamic
+  def clearAnnotations(): js.Dynamic
   @JSName("$detectNewLine")
-  def `$detectNewLine`(text: String): js.Dynamic = js.native
-  def getWordRange(row: Double, column: Double): Range = js.native
-  def getAWordRange(row: Double, column: Double): js.Dynamic = js.native
-  def setNewLineMode(newLineMode: String): js.Dynamic = js.native
-  def getNewLineMode(): String = js.native
-  def setUseWorker(useWorker: Boolean): js.Dynamic = js.native
-  def getUseWorker(): Boolean = js.native
-  def onReloadTokenizer(): js.Dynamic = js.native
+  def `$detectNewLine`(text: String): js.Dynamic
+  def getWordRange(row: Double, column: Double): Range
+  def getAWordRange(row: Double, column: Double): js.Dynamic
+  def setNewLineMode(newLineMode: String): js.Dynamic
+  def getNewLineMode(): String
+  def setUseWorker(useWorker: Boolean): js.Dynamic
+  def getUseWorker(): Boolean
+  def onReloadTokenizer(): js.Dynamic
   @JSName("$mode")
-  def `$mode`(mode: TextMode): js.Dynamic = js.native
-  def getMode(): TextMode = js.native
-  def setScrollTop(scrollTop: Double): js.Dynamic = js.native
-  def getScrollTop(): Double = js.native
-  def setScrollLeft(): js.Dynamic = js.native
-  def getScrollLeft(): Double = js.native
-  def getScreenWidth(): Double = js.native
-  def getLine(row: Double): String = js.native
-  def getLines(firstRow: Double, lastRow: Double): js.Array[String] = js.native
-  def getLength(): Double = js.native
-  def getTextRange(range: Range): String = js.native
-  def insert(position: Position, text: String): js.Dynamic = js.native
-  def remove(range: Range): js.Dynamic = js.native
-  def undoChanges(deltas: js.Array[js.Any], dontSelect: Boolean): Range = js.native
-  def redoChanges(deltas: js.Array[js.Any], dontSelect: Boolean): Range = js.native
-  def setUndoSelect(enable: Boolean): js.Dynamic = js.native
-  def replace(range: Range, text: String): js.Dynamic = js.native
-  def moveText(fromRange: Range, toPosition: js.Any): Range = js.native
-  def indentRows(startRow: Double, endRow: Double, indentString: String): js.Dynamic = js.native
-  def outdentRows(range: Range): js.Dynamic = js.native
-  def moveLinesUp(firstRow: Double, lastRow: Double): Double = js.native
-  def moveLinesDown(firstRow: Double, lastRow: Double): Double = js.native
-  def duplicateLines(firstRow: Double, lastRow: Double): Double = js.native
-  def setUseWrapMode(useWrapMode: Boolean): js.Dynamic = js.native
-  def getUseWrapMode(): Boolean = js.native
-  def setWrapLimitRange(min: Double, max: Double): js.Dynamic = js.native
-  def adjustWrapLimit(desiredLimit: Double): Boolean = js.native
-  def getWrapLimit(): Double = js.native
-  def getWrapLimitRange(): js.Dynamic = js.native
+  def `$mode`(mode: TextMode): js.Dynamic
+  def getMode(): TextMode
+  def setScrollTop(scrollTop: Double): js.Dynamic
+  def getScrollTop(): Double
+  def setScrollLeft(): js.Dynamic
+  def getScrollLeft(): Double
+  def getScreenWidth(): Double
+  def getLine(row: Double): String
+  def getLines(firstRow: Double, lastRow: Double): js.Array[String]
+  def getLength(): Double
+  def getTextRange(range: Range): String
+  def insert(position: Position, text: String): js.Dynamic
+  def remove(range: Range): js.Dynamic
+  def undoChanges(deltas: js.Array[js.Any], dontSelect: Boolean): Range
+  def redoChanges(deltas: js.Array[js.Any], dontSelect: Boolean): Range
+  def setUndoSelect(enable: Boolean): js.Dynamic
+  def replace(range: Range, text: String): js.Dynamic
+  def moveText(fromRange: Range, toPosition: js.Any): Range
+  def indentRows(startRow: Double, endRow: Double, indentString: String): js.Dynamic
+  def outdentRows(range: Range): js.Dynamic
+  def moveLinesUp(firstRow: Double, lastRow: Double): Double
+  def moveLinesDown(firstRow: Double, lastRow: Double): Double
+  def duplicateLines(firstRow: Double, lastRow: Double): Double
+  def setUseWrapMode(useWrapMode: Boolean): js.Dynamic
+  def getUseWrapMode(): Boolean
+  def setWrapLimitRange(min: Double, max: Double): js.Dynamic
+  def adjustWrapLimit(desiredLimit: Double): Boolean
+  def getWrapLimit(): Double
+  def getWrapLimitRange(): js.Dynamic
   @JSName("$getDisplayTokens")
-  def `$getDisplayTokens`(str: String, offset: Double): js.Dynamic = js.native
+  def `$getDisplayTokens`(str: String, offset: Double): js.Dynamic
   @JSName("$getStringScreenWidth")
-  def `$getStringScreenWidth`(str: String, maxScreenColumn: Double, screenColumn: Double): js.Array[Double] = js.native
-  def getRowLength(row: Double): Double = js.native
-  def getScreenLastRowColumn(screenRow: Double): Double = js.native
-  def getDocumentLastRowColumn(docRow: Double, docColumn: Double): Double = js.native
-  def getDocumentLastRowColumnPosition(docRow: Double, docColumn: Double): Double = js.native
-  def getRowSplitData(): String = js.native
-  def getScreenTabSize(screenColumn: Double): Double = js.native
-  def screenToDocumentPosition(screenRow: Double, screenColumn: Double): js.Dynamic = js.native
-  def documentToScreenPosition(docRow: Double, docColumn: Double): js.Dynamic = js.native
-  def documentToScreenColumn(row: Double, docColumn: Double): Double = js.native
-  def documentToScreenRow(docRow: Double, docColumn: Double): js.Dynamic = js.native
-  def getScreenLength(): Double = js.native
+  def `$getStringScreenWidth`(str: String, maxScreenColumn: Double, screenColumn: Double): js.Array[Double]
+  def getRowLength(row: Double): Double
+  def getScreenLastRowColumn(screenRow: Double): Double
+  def getDocumentLastRowColumn(docRow: Double, docColumn: Double): Double
+  def getDocumentLastRowColumnPosition(docRow: Double, docColumn: Double): Double
+  def getRowSplitData(): String
+  def getScreenTabSize(screenColumn: Double): Double
+  def screenToDocumentPosition(screenRow: Double, screenColumn: Double): js.Dynamic
+  def documentToScreenPosition(docRow: Double, docColumn: Double): js.Dynamic
+  def documentToScreenColumn(row: Double, docColumn: Double): Double
+  def documentToScreenRow(docRow: Double, docColumn: Double): js.Dynamic
+  def getScreenLength(): Double
 }
 
 @js.native
@@ -420,12 +420,12 @@ class Editor protected () extends js.Object {
 object Editor extends js.Object {
 }
 
-@js.native
+@ScalaJSDefined
 trait EditorChangeEvent extends js.Object {
-  var start: Position = js.native
-  var end: Position = js.native
-  var action: String = js.native
-  var lines: js.Array[js.Any] = js.native
+  var start: Position
+  var end: Position
+  var action: String
+  var lines: js.Array[js.Any]
 }
 
 @js.native
