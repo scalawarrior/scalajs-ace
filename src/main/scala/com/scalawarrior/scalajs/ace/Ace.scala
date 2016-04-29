@@ -229,7 +229,7 @@ trait IEditSession extends js.Object {
   def getMode(): TextMode
   def setScrollTop(scrollTop: Double): js.Dynamic
   def getScrollTop(): Double
-  def setScrollLeft(): js.Dynamic
+  def setScrollLeft(scrollLeft: Double): js.Dynamic
   def getScrollLeft(): Double
   def getScreenWidth(): Double
   def getLine(row: Double): String
