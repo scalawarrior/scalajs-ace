@@ -13,6 +13,13 @@ resolvers += "amateras-repo" at "http://amateras.sourceforge.jp/mvn/"
 
 libraryDependencies += "com.scalawarrior" %%% "scalajs-ace" % "0.0.2"
 ```
+
+If are using wabjars, you can introduce Ace by adding following dependency:
+
+```scala
+libraryDependencies += "org.webjars" % "ace" % "01.08.2014"
+```
+
 then enjoy Ace in Scala.js!
 
 ```scala
