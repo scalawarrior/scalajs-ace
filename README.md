@@ -11,7 +11,7 @@ Add the following to your sbt build definition:
 ```scala
 resolvers += "amateras-repo" at "http://amateras.sourceforge.jp/mvn/"
 
-libraryDependencies += "com.scalawarrior" %%% "scalajs-ace" % "0.0.2"
+libraryDependencies += "com.scalawarrior" %%% "scalajs-ace" % "0.0.3"
 ```
 
 If are using wabjars, you can introduce Ace by adding following dependency:
