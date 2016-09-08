@@ -410,6 +410,7 @@ class Editor protected () extends js.Object {
   def find(needle: String, options: js.Any = ???, animate: Boolean = ???): js.Dynamic = js.native
   def findNext(options: js.Any = ???, animate: Boolean = ???): js.Dynamic = js.native
   def findPrevious(options: js.Any = ???, animate: Boolean = ???): js.Dynamic = js.native
+  def setOptions(options: js.Dynamic): js.Dynamic = js.native
   def undo(): js.Dynamic = js.native
   def redo(): js.Dynamic = js.native
   def destroy(): js.Dynamic = js.native
