@@ -476,7 +476,7 @@ class Range protected () extends js.Object {
   var start: Position = js.native
   var end: Position = js.native
   def isEmpty(): Boolean = js.native
-  def isEqual(range: Range): js.Dynamic = js.native
+  def isEqual(range: Range): Boolean = js.native
   override def toString(): String = js.native
   def contains(row: Double, column: Double): Boolean = js.native
   def compareRange(range: Range): Double = js.native
