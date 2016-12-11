@@ -9,15 +9,12 @@ version := "0.0.4-SNAPSHOT"
 
 organization := "com.scalawarrior"
 
-scalaVersion := "2.11.7"
+scalaVersion := "2.11.8"
 
-//crossScalaVersions := Seq("2.10.4", "2.11.5")
+crossScalaVersions := Seq("2.11.8", "2.12.1")
 
 libraryDependencies +=
-  "org.scala-js" %%% "scalajs-dom" % "0.9.0"
-
-//jsDependencies +=
-//  "org.webjars" % "jquery" % "2.1.3" / "2.1.3/jquery.js"
+  "org.scala-js" %%% "scalajs-dom" % "0.9.1"
 
 scalacOptions ++= Seq(
   "-deprecation",
