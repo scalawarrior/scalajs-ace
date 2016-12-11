@@ -29,9 +29,9 @@ scalacOptions ++= Seq(
   "-Ywarn-unused-import"
 )
 
-publishTo <<= (version) { version: String =>
+publishTo := {
   val repoInfo =
-    if (version.trim.endsWith("SNAPSHOT"))
+    if (version.value.trim.endsWith("SNAPSHOT"))
       ("amateras snapshots" -> "/home/groups/a/am/amateras/htdocs/mvn-snapshot/")
     else
       ("amateras releases" -> "/home/groups/a/am/amateras/htdocs/mvn/")
