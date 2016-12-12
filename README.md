@@ -14,7 +14,7 @@ resolvers += "amateras-repo" at "http://amateras.sourceforge.jp/mvn/"
 libraryDependencies += "com.scalawarrior" %%% "scalajs-ace" % "0.0.4"
 ```
 
-If are using wabjars, you can introduce Ace by adding following dependency:
+If are using webjars, you can introduce Ace by adding following dependency:
 
 ```scala
 libraryDependencies += "org.webjars" % "ace" % "01.08.2014"
