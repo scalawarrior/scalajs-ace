@@ -5,16 +5,14 @@ name := "Scala.js Ace"
 
 normalizedName := "scalajs-ace"
 
-version := "0.0.4"
+version := "0.0.5-SNAPSHOT"
 
 organization := "com.scalawarrior"
 
-scalaVersion := "2.11.8"
-
-crossScalaVersions := Seq("2.11.8", "2.12.1")
+scalaVersion := "2.12.2"
 
 libraryDependencies +=
-  "org.scala-js" %%% "scalajs-dom" % "0.9.1"
+  "org.scala-js" %%% "scalajs-dom" % "0.9.2"
 
 scalacOptions ++= Seq(
   "-deprecation",
